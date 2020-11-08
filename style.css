@@ -1,0 +1,28 @@
+.slider__section {
+  position: relative;
+  width: 100%;
+  font-size: 0;
+  background-color: black;
+}
+.slider__section .slider__image {
+  width: 100%;
+}
+.slider__section .prev__button, .slider__section .next__button {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #0966ff;
+  color: white;
+  font-size: 26px;
+  border: none;
+  cursor: pointer;
+}
+.slider__section .prev__button {
+  left: 0;
+}
+.slider__section .next__button {
+  right: 0;
+}
+
