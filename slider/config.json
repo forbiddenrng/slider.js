@@ -6,6 +6,7 @@
       "background": "#0966ff",
       "arrows": {
         "enable": true,
+        "type": "",
         "size": 26,
         "color": "white"
       }
