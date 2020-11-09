@@ -23,7 +23,7 @@ class Slider {
 
   changeSlide(slide, isNext) {
     slide === this.imagesArray.length - 1 ? this.disableButton(this.nextButton) : this.ableButton(this.nextButton);
-    slide === 0 ? this.disableButton(this.prevButton) : this.ableButton(this.prevButton);
+    slide <= 0 ? this.disableButton(this.prevButton) : this.ableButton(this.prevButton);
     this.image.setAttribute("src", this.imagesArray[slide])
     isNext ? this.actuallSlide++ : this.actuallSlide--;
   }
@@ -35,6 +35,9 @@ class Slider {
     this.imagesArray = Array.from(array)
     this.prevButton.addEventListener("click", () => this.changeSlide(this.actuallSlide - 1, false))
     this.nextButton.addEventListener("click", () => this.changeSlide(this.actuallSlide + 1, true))
+    if (this.actuallSlide === 0) {
+      this.disableButton(this.prevButton)
+    }
   }
 
 
