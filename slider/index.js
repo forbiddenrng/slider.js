@@ -5,6 +5,7 @@ class Slider {
     this.nextButton = null;
     this.actuallSlide = 0;
     this.imagesArray = null;
+    this.styles = null;
     this.UISelectors = {
       image: "[data-image]",
       prevButton: "[data-prev]",
@@ -27,6 +28,16 @@ class Slider {
     this.image.setAttribute("src", this.imagesArray[slide])
     isNext ? this.actuallSlide++ : this.actuallSlide--;
   }
+  getData() {
+    fetch("./slider/config.json")
+      .then(response => response.json())
+      .then(data => {
+        // console.log(data)
+        this.styles = data
+      })
+      .catch(e => console.log(e))
+  }
+
   initializeSlider(array) {
     this.image = document.querySelector(this.UISelectors.image)
     this.prevButton = document.querySelector(this.UISelectors.prevButton)
@@ -38,6 +49,7 @@ class Slider {
     if (this.actuallSlide === 0) {
       this.disableButton(this.prevButton)
     }
+    this.getData()
   }
 
 

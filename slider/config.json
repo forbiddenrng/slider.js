@@ -1,0 +1,14 @@
+{
+  "styles": {
+    "buttons": {
+      "width": 60,
+      "height": 60,
+      "background": "#0966ff",
+      "arrows": {
+        "enable": true,
+        "size": 26,
+        "color": "white"
+      }
+    }
+  }
+}
