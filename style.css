@@ -25,4 +25,25 @@
 .slider__section .next__button {
   right: 0;
 }
+.dot__container {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+
+}
+.dot{
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  display: inline-block;
+  margin: 5px;
+  border: 2px solid red;
+  border-radius: 50%;
+}
+.dot.on {
+  border-color: blue;
+}
 

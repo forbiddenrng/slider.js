@@ -1,15 +1,18 @@
 {
-  "styles": {
-    "buttons": {
-      "width": 60,
-      "height": 60,
-      "background": "#0966ff",
-      "arrows": {
-        "enable": true,
-        "type": "",
-        "size": 26,
-        "color": "white"
-      }
+  "buttons": {
+    "width": 60,
+    "height": 60,
+    "background": "#0966ff",
+    "arrows": {
+      "enable": true,
+      "type": "angle",
+      "size": 26,
+      "color": "white"
     }
+  },
+  "dots": {
+    "enable": false,
+    "color": "red",
+    "border": "white"
   }
 }
