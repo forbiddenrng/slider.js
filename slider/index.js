@@ -40,6 +40,27 @@ class Slider {
     }
     isNext ? this.actuallSlide++ : this.actuallSlide--;
   }
+  addDotStyles() {
+    const style = document.createElement('style');
+    const { dotSize, borderSize, color, borderColor, borderStyle, activeDotColor, activeDotBorderColor } = this.styles.dots
+    style.innerHTML += `
+    .dot{
+      width: ${dotSize}px;
+      height: ${dotSize}px;
+      background-color: ${color};
+      display: inline-block;
+      margin: 5px;
+      border: ${borderSize}px ${borderStyle} ${borderColor};
+      border-radius: 50%;
+    }
+    .dot.on {
+      border-color: ${activeDotBorderColor};
+      background-color: ${activeDotColor};
+    }
+    `;
+    document.querySelector('head').appendChild(style);
+
+  }
   getData() {
     fetch("./slider/config.json")
       .then(response => response.json())
@@ -109,6 +130,7 @@ class Slider {
     }
     this.dotsArray = [...document.querySelectorAll("div.dot")]
     this.dotsArray[this.actuallSlide].classList.add("on")
+    this.addDotStyles();
   }
   initializeSlider(array) {
     this.sliderSection = document.querySelector(this.UISelectors.sliderSection)

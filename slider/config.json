@@ -11,8 +11,13 @@
     }
   },
   "dots": {
-    "enable": false,
-    "color": "red",
-    "border": "white"
+    "enable": true,
+    "dotSize": 10,
+    "color": "white",
+    "borderColor": "red",
+    "borderStyle": "solid",
+    "borderSize": 2,
+    "activeDotColor": "white",
+    "activeDotBorderColor": "blue"
   }
 }
