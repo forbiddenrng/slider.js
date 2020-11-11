@@ -86,7 +86,7 @@ class Slider {
     this.prevButton.style.height = `${isDefault ? `60xp` : `${this.styles.buttons.height}px`}`;
     //next button size
     this.nextButton.style.width = `${isDefault ? `60px` : `${this.styles.buttons.width}px`}`;
-    this.nextButton.style.height = `${isDefault ? `60xp` : `${this.styles.buttons.height}px`}`;
+    this.nextButton.style.height = `${isDefault ? `60px` : `${this.styles.buttons.height}px`}`;
     //ARROWS
     if (this.styles.buttons.arrows.enable) {
       switch (this.styles.buttons.arrows.type) {
@@ -111,6 +111,10 @@ class Slider {
           break;
         }
       }
+      this.nextButton.style.color = `${isDefault ? `white` : `${this.styles.buttons.arrows.color}`}`;
+      this.prevButton.style.color = `${isDefault ? `white` : `${this.styles.buttons.arrows.color}`}`;
+      this.nextButton.style.fontSize = `${isDefault ? `26px` : `${this.styles.buttons.arrows.size}px`}`;
+      this.prevButton.style.fontSize = `${isDefault ? `26px` : `${this.styles.buttons.arrows.size}px`}`;
     }
   }
   createDotsContainer() {

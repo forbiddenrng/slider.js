@@ -14,10 +14,10 @@
     "enable": true,
     "dotSize": 10,
     "color": "white",
-    "borderColor": "red",
+    "borderColor": "royalblue",
     "borderStyle": "solid",
-    "borderSize": 2,
-    "activeDotColor": "white",
-    "activeDotBorderColor": "blue"
+    "borderSize": 3,
+    "activeDotColor": "red",
+    "activeDotBorderColor": "white"
   }
 }
